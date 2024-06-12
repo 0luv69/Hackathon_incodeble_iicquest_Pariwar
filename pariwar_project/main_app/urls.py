@@ -18,4 +18,6 @@ urlpatterns = [
     path('email-verify/', email_verify_token, name="email_verify_token"),
 
 
+    path('get-reply-given/', Get_Reply_Given, name='Get_Reply_Given'),
+    path('post-issue/', Post_Issue, name='Post_Issue'),
 ]

@@ -21,32 +21,27 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
 
-
-
-# # Create your views here.
-
-
 # # Accounts Api 
-
 class LoginApi(APIView):
     def post(self, request):
         data = request.data 
-        username = data.get('email')
+        username = data.get('username')
         password = data.get('password')
         if not username or not password:
-            return Response({'message': 'Username & Password Fields is required', 'login': False}, status=status.HTTP_400_BAD_REQUEST)
-        
+            return Response({'message': 'username & password Fields is required', 'login': False}, status=status.HTTP_400_BAD_REQUEST)
+        print(username, password)
         user = authenticate(username=username, password=password)
         if user is not None:
             refresh = RefreshToken.for_user(user)
             return Response({
-                'login': True,
+                'posted': True,
                 'user_id': user.pk,
+                'user_name': user.username,
                 'access': str(refresh.access_token),
                 'refresh': str(refresh),
             }, status=status.HTTP_200_OK)
         else:
-            return Response({'message': 'Invalid credentials', 'login':False}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response({'message': 'Invalid credentials', 'posted':False}, status=status.HTTP_401_UNAUTHORIZED)
 
 class RegisterApi(APIView):
     def post(self, request):
@@ -63,16 +58,15 @@ class RegisterApi(APIView):
             return Response({"message": "Username already exists", "posted": False}, status=status.HTTP_400_BAD_REQUEST)
         return Response({"message": serializer.errors, "posted": False}, status=status.HTTP_400_BAD_REQUEST)
 
-
 @api_view(['POST'])
 def email_verify_token(request):
     data = request.data
     id = data.get('id')
-    token = data.get('emailtoken')
+    email_token = data.get('email_token')
     
     try:
         user = User.objects.get(id = id)
-        bio_obj = Profile.objects.get(user__id=id, email_token=token)
+        bio_obj = ProfileModel.objects.get(user__id=id, email_token=email_token)
         bio_obj.is_verified = True
         bio_obj.save()
 
@@ -88,16 +82,13 @@ def email_verify_token(request):
     except User.DoesNotExist:
         return Response({
             'verified':False,
-            'message': 'Invalid ID or token',
+            'message': 'Invalid id or email_token',
         }, status=403)
     except Exception as e:
         return Response({
             'verified':False,
             'message': f'An unexpected error occurred,{e}'
         }, status=500)
-
-
-
 
 def send_account_activation_email(email, email_token, complaint_instance):
     subject= 'lets verify so click the link plz'
@@ -108,6 +99,35 @@ def send_account_activation_email(email, email_token, complaint_instance):
     thanks
 '''
     send_mail(subject, message, email_from, [email])
+
+
+
+
+# # Issue 
+@api_view(['POST'])
+def Post_Issue(request):
+        data = request.data
+    # if data:
+        serializer = PostIssueSerializer(data=data)
+        if serializer.is_valid():
+            serl =serializer.save()
+            return Response({'success':True, "payload": serl })
+        else:
+            return Response({'success':False, "error" :serializer.errors})
+    
+@api_view(['POST'])
+def Get_Reply_Given(request):
+    data = request.data
+    if data:
+        try:
+            id = data.get('id')
+            issuemodel = IssueModel.objects.filter(issued_by__id= id)
+            serializer = IssueSerializer(issuemodel, many = True)
+            return Response({'success':True, "payload": serializer.data})
+        except Exception as e:
+            return Response({'success':False, "message": e, "hint": "Incorrect id of user"})
+    return Response({'success':False, "message": "Got None or Incorrect id of user"})
+        
 
 
 
