@@ -116,7 +116,7 @@ def Post_Issue(request):
             return Response({'success':False, "error" :serializer.errors})
     
 @api_view(['POST'])
-def Get_Reply_Given(request):
+def Get_Issue(request):
     data = request.data
     if data:
         try:
@@ -128,6 +128,9 @@ def Get_Reply_Given(request):
             return Response({'success':False, "message": e, "hint": "Incorrect id of user"})
     return Response({'success':False, "message": "Got None or Incorrect id of user"})
         
+
+
+# # reply
 
 
 

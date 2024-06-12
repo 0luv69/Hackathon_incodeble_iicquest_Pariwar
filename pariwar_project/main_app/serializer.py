@@ -27,7 +27,7 @@ class PostIssueSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField()
     class Meta:
         model = IssueModel
-        fields = ['id', 'title', 'description', 'prefered_char']
+        fields = ['id', 'title', 'description', 'preferred_char']
     
     def create(self, validated_data):
         id = validated_data.pop('id')

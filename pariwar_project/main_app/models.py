@@ -13,10 +13,14 @@ class ProfileModel(models.Model):
     ]
     
     CHARACTERFIELD = [
-        ('father', 'Father'),
-        ('mother', 'Mother'),
-        ('son', 'Son'),
-    ]
+                ('father', 'Father'),
+                ('mother', 'Mother'),
+                ('son', 'Son'),
+                   ('daughter', 'Daughter'),
+   ('grandfather', 'Grandfather'),
+   ('grandmother', 'Grandmother'),
+   ('uncle', 'Uncle'),
+]
     
     email_token = models.CharField(max_length=100)
     gender = models.CharField(max_length=100, choices=GENDER_CHOICES)
@@ -32,12 +36,17 @@ class IssueModel(models.Model):
                 ('father', 'Father'),
                 ('mother', 'Mother'),
                 ('son', 'Son'),
-            ]   
+                   ('daughter', 'Daughter'),
+   ('grandfather', 'Grandfather'),
+   ('grandmother', 'Grandmother'),
+   ('uncle', 'Uncle'),
+
+]   
         issued_by = models.ForeignKey(User, on_delete=models.CASCADE)
         
         title = models.CharField(max_length=100)
         description = models.TextField()
-        prefered_char = models.CharField(max_length=100, choices=CHARACTERFIELD)
+        preferred_char = models.CharField(max_length=100, choices=CHARACTERFIELD)
     
     
         got_relation = models.BooleanField(default=False)
