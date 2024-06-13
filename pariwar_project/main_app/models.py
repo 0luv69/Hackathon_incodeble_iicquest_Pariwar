@@ -21,11 +21,10 @@ class ProfileModel(models.Model):
    ('grandmother', 'Grandmother'),
    ('uncle', 'Uncle'),
 ]
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     
     email_token = models.CharField(max_length=100)
-    gender = models.CharField(max_length=100, choices=GENDER_CHOICES)
     is_verified = models.BooleanField(default=False)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     age = models.IntegerField()
     character = models.CharField(max_length=100, choices=CHARACTERFIELD)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -57,29 +56,28 @@ class IssueModel(models.Model):
 
 
 class ReplyModel(models.Model):
-        issued_by = models.ForeignKey(IssueModel, on_delete=models.CASCADE) 
         replied_by = models.ForeignKey(User, on_delete=models.CASCADE)
+        issued_by = models.ForeignKey(IssueModel, on_delete=models.CASCADE) 
         message = models.TextField()
+
         created_at = models.DateTimeField(auto_now_add=True)
         updated = models.DateTimeField(auto_now=True)
         
         
         def _str_(self):
-            return self.issued_by.username
-        
-        
+            return self.issued_by.issued_by.username
         
 class RelationModel(models.Model):
-    name = models.CharField(max_length=100)
-    issued_by = models.ForeignKey(IssueModel, on_delete=models.CASCADE)
-    replied_by = models.ForeignKey(ReplyModel, on_delete=models.CASCADE)
+    relation_name = models.CharField(max_length=100, default=".")
+    issued_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="issued_id")
+    suggested_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="sugessted_by")
     
     def _str_(self): 
-        return self.name 
+        return self.relation_name 
     
 class ChatModel(models.Model):
     sender = models.ForeignKey(User, related_name='sender', on_delete=models.CASCADE)
-    receiver = models.ForeignKey(ProfileModel, related_name='reciver', on_delete=models.CASCADE)
+    # receiver = models.ForeignKey(ProfileModel, related_name='reciver', on_delete=models.CASCADE)
     message = models.TextField()
     relation = models.ForeignKey(RelationModel, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)

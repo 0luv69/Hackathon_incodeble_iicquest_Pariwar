@@ -21,7 +21,21 @@ class RegisterUserSerializer(serializers.ModelSerializer):
         profile = ProfileModel.objects.create(user=user, email_token= email_token,age=age, character=character)
     
         return user
-    
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProfileModel
+        fields = ['user', 'email_token', 'is_verified', 'age', 'character']
+        
+        def create(self, validated_data):
+            profile = ProfileModel.objects.create(
+                user=validated_data.pop['user'],
+                email_token=validated_data.pop['email_token'],
+                is_verified=validated_data.pop['is_verified'],
+                age=validated_data.pop['age'],
+                character=validated_data.pop['character']
+            )
+            return profile
 
 class PostIssueSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField()
@@ -37,10 +51,93 @@ class PostIssueSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("User does not exist.")
         
         issuemodel = IssueModel.objects.create(issued_by=user, **validated_data)
-        return issuemodel
+        issue_serilizer = IssueSerializer(issuemodel)
+        return issue_serilizer
 
 class IssueSerializer(serializers.ModelSerializer):
     class Meta:
         model = IssueModel
         fields= '__all__'
     
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username']
+
+class ReplySerializer(serializers.ModelSerializer):
+    replied_by = UserSerializer(read_only=True)
+
+    class Meta:
+        model = ReplyModel
+        fields = ['id', 'message', 'created_at', 'updated', 'replied_by', 'issued_by']
+    
+
+class PostReplySerializer(serializers.ModelSerializer):
+    issued_id = serializers.IntegerField()
+    reply_user_id = serializers.IntegerField()
+    class Meta:
+        model = ReplyModel
+        fields = ['issued_id','reply_user_id', 'message']
+    
+    def validate(self, attrs):
+        issued_id = attrs['issued_id']
+        reply_user_id = attrs['reply_user_id']
+        
+        # Check if a reply with the same issued_id and reply_user_id already exists
+        if ReplyModel.objects.filter(issued_by=issued_id, replied_by=reply_user_id).exists():
+            raise serializers.ValidationError("A reply for this issue by this user already exists.")
+        
+        return attrs
+    
+    def create(self, validated_data):
+        issued_id = validated_data.pop('issued_id')
+        reply_user_id = validated_data.pop('reply_user_id')
+        try:
+            issued_user = IssueModel.objects.get(id = issued_id)
+            user_reply = User.objects.get(id = reply_user_id)
+
+        except ObjectDoesNotExist:
+            raise serializers.ValidationError("User does not exist.")
+        
+        replymodel = ReplyModel.objects.create(issued_by=issued_user,replied_by=user_reply, **validated_data)
+        reply_serilizer = ReplySerializer(replymodel)
+        return reply_serilizer
+    
+
+
+
+class ChatSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChatModel
+        fields = [ 'sender', 'receiver', 'message', 'relation']
+        
+        def create(self, validated_data):
+            # print(validated_data)
+            chat = ChatModel.objects.create(
+                sender=validated_data.pop['sender'],
+                receiver=validated_data.pop['receiver'],
+                message=validated_data.pop['message'],
+                relation_id = validated_data.pop['id']
+            )
+            return chat
+        
+
+class ChatSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChatModel
+        fields = ['sender', 'receiver', 'message', 'relation']
+
+    def create(self, validated_data):
+        chat = ChatModel.objects.create(
+            sender=validated_data['sender'],
+            receiver=validated_data['receiver'],
+            message=validated_data['message'],
+            relation=validated_data['relation']
+        )
+        return chat
+
+
+class RelationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RelationModel
+        fields = '__all__'

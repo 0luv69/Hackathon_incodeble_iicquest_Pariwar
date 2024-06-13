@@ -17,7 +17,27 @@ urlpatterns = [
     path('register/', RegisterApi.as_view(), name='register'),
     path('email-verify/', email_verify_token, name="email_verify_token"),
 
+    path('get-profile/', get_profile, name='get_profile'),
 
+    path('get-all-issue/', Get_All_Issue, name='Get_All_Issue'),
     path('get-issue/', Get_Issue, name='Get_Reply_Given'),
     path('post-issue/', Post_Issue, name='Post_Issue'),
+    path('get-issue-chareter/', Get_Issue_Charater, name='Get_Issue_Charater'),
+
+    path('get-reply-issue/', get_issue_reply, name='get_issue_reply'),
+
+    # path('get-reply-list/', get_reply_list, name='get_reply_list'),
+    
+    path ('get-specific-issue/', Get_spefic_Issue, name = 'Get_spefic_Issue'),
+    
+    path('post-reply/', Postreply, name='Post_reply'),
+
+
+    path('relation-update/', relation, name='relation'),
+    path('get-particular-relation/', get_particular_relation, name='get_particular_relation'),
+
+    path('chat/', chat, name='chat'),
+    path('get-chat/', get_chat, name='get_chat'),
+    
+
 ]
