@@ -37,6 +37,15 @@ class ProfileSerializer(serializers.ModelSerializer):
             )
             return profile
 
+class GetProfile_Serializers(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username', read_only=True)
+    email = serializers.CharField(source='user.email', read_only=True)
+    id = serializers.IntegerField(source='user.id', read_only=True)
+    class Meta:
+        model = ProfileModel
+        fields = ['id', 'username', 'email', 'is_verified', 'age', 'character']
+        
+
 class PostIssueSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField()
     class Meta:
@@ -125,16 +134,9 @@ class ChatSerializer(serializers.ModelSerializer):
 class ChatSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChatModel
-        fields = ['sender', 'receiver', 'message', 'relation']
+        fields = ['sender', 'message', 'relation','date']
 
-    def create(self, validated_data):
-        chat = ChatModel.objects.create(
-            sender=validated_data['sender'],
-            receiver=validated_data['receiver'],
-            message=validated_data['message'],
-            relation=validated_data['relation']
-        )
-        return chat
+
 
 
 class RelationSerializer(serializers.ModelSerializer):

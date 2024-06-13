@@ -26,7 +26,6 @@ urlpatterns = [
 
     path('get-reply-issue/', get_issue_reply, name='get_issue_reply'),
 
-    # path('get-reply-list/', get_reply_list, name='get_reply_list'),
     
     path ('get-specific-issue/', Get_spefic_Issue, name = 'Get_spefic_Issue'),
     
@@ -36,7 +35,7 @@ urlpatterns = [
     path('relation-update/', relation, name='relation'),
     path('get-particular-relation/', get_particular_relation, name='get_particular_relation'),
 
-    path('chat/', chat, name='chat'),
+    path('post-chat/', post_chat, name='chat'),
     path('get-chat/', get_chat, name='get_chat'),
     
 

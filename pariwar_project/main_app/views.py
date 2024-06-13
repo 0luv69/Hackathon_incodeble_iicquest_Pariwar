@@ -103,16 +103,21 @@ def send_account_activation_email(email, email_token, complaint_instance):
 
 
 #get profile
-@api_view([ 'GET'])
+@api_view(['POST'])
 def get_profile(request):
-    
-    serializer = ProfileSerializer(data=request.data)
-    initial_data = serializer.initial_data
-    users = ProfileModel.objects.get(user_id=initial_data['id'])
-    profile_serializer = ProfileSerializer(users, many=False)
-    if request.method == 'GET':
-        return Response({'success':True, 'data': profile_serializer.data})
-    return Response({'success':False, "message" :serializer.errors})
+    data = request.data
+    try:
+        user_id = data.get('id')
+        user = User.objects.get(id=user_id)
+        profile = ProfileModel.objects.get(user=user)
+        serializer = GetProfile_Serializers(profile)
+        return Response({'success': True, 'data': serializer.data})
+    except User.DoesNotExist:
+        return Response({'success': False, 'message': 'User not found'}, status=404)
+    except ProfileModel.DoesNotExist:
+        return Response({'success': False, 'message': 'Profile not found'}, status=404)
+    except Exception as e:
+        return Response({'success': False, 'message': str(e)}, status=500)
 
 
 
@@ -220,43 +225,38 @@ def get_reply_list(request):
 
 
 @api_view(['POST'])
-def chat(request):
-    serializer = ChatSerializer(data=request.data) 
-    if request.method == 'GET':
-        chats = ChatModel.objects.all()
-        serializer = ChatSerializer(chats, many=True)
-        return Response(serializer.data)
-    else:
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=201)
-        return Response({'request': False, 'message': 'Unsuccessfully', 'error': serializer.errors}, status=400)
+def get_chat(request):
+    data = request.data
+    try:
+        relation_id = data.get('relation_id')
+        if not relation_id:
+            return Response({'success': False, 'message': 'relation_id is required'}, status=400)
 
+        relation_obj = RelationModel.objects.get(id = relation_id)
+        chatmodel= ChatModel.objects.filter(relation= relation_obj)
+        serializer = ChatSerializer(chatmodel, many= True)
+        return Response({'success': True, "payload": serializer.data})
+    except Exception as e:
+        return Response({'success': False, 'message': e})
 
 @api_view(['POST'])
 def post_chat(request):
     data = request.data
-    issued_id = data.get('sender')
-    issued_id = data.get('message')
-    issued_id = data.get('message')
-
-
-
-
-
-
-@api_view(['POST'])
-def get_chat(request):
-    data = request.data
     try:
-        senderid = data.get('sender_id')
-        chat_obj = ChatModel.objects.get(sender_id =senderid )
+        sender_id = data.get('sender_id')
+        message = data.get('message')
+        relation_id = data.get('relation_id')
+        if not relation_id and not sender_id:
+            return Response({'success': False, 'message': 'relation_id or sender id is not valid'}, status=400)
 
-        serializer = ChatSerializer(chat_obj, many = True) 
-        return Response({"success": True, "payload" : serializer.data})
+        sender_urs_obj = User.objects.get(id=sender_id )
+        relation_obj = RelationModel.objects.get(id = relation_id)
+        chatmodel = ChatModel.objects.create(sender= sender_urs_obj,relation = relation_obj, message= message)
+        return Response({'success': True})
     except Exception as e:
         return Response({'success': False, 'message': e})
 
+    
 
 @api_view(['POST'])
 def relation(request):
