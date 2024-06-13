@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from main_app.models import *
 from django.core.exceptions import ObjectDoesNotExist
 
+#   --------------------------   Accounts Api serializers -----------------------
 
 class RegisterUserSerializer(serializers.ModelSerializer):
     email_token = serializers.CharField(write_only=True, required=True)
@@ -21,6 +22,10 @@ class RegisterUserSerializer(serializers.ModelSerializer):
         profile = ProfileModel.objects.create(user=user, email_token= email_token,age=age, character=character)
     
         return user
+
+
+
+# ---------------------------------Profile Api Serializers--------------------------------------------------------
 
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -44,7 +49,14 @@ class GetProfile_Serializers(serializers.ModelSerializer):
     class Meta:
         model = ProfileModel
         fields = ['id', 'username', 'email', 'is_verified', 'age', 'character']
-        
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username']
+
+
+# -----------------------------------Issue Serializers Segment-----------------------------------------
 
 class PostIssueSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField()
@@ -67,11 +79,9 @@ class IssueSerializer(serializers.ModelSerializer):
     class Meta:
         model = IssueModel
         fields= '__all__'
-    
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['id', 'username']
+
+
+# ------------------------- Reply / Suggestion Serializers Segment----------------------------- 
 
 class ReplySerializer(serializers.ModelSerializer):
     replied_by = UserSerializer(read_only=True)
@@ -80,7 +90,6 @@ class ReplySerializer(serializers.ModelSerializer):
         model = ReplyModel
         fields = ['id', 'message', 'created_at', 'updated', 'replied_by', 'issued_by']
     
-
 class PostReplySerializer(serializers.ModelSerializer):
     issued_id = serializers.IntegerField()
     reply_user_id = serializers.IntegerField()
@@ -113,8 +122,14 @@ class PostReplySerializer(serializers.ModelSerializer):
         return reply_serilizer
     
 
+#       -------------------------- Relation Serializers ----------------------
+class RelationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RelationModel
+        fields = '__all__'
 
 
+#      ------------------------ Chat Segment ----------------------
 class ChatSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChatModel
@@ -130,16 +145,13 @@ class ChatSerializer(serializers.ModelSerializer):
             )
             return chat
         
-
 class ChatSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='sender.username', read_only=True)
+
     class Meta:
         model = ChatModel
-        fields = ['sender', 'message', 'relation','date']
+        fields = ['username','sender', 'message', 'relation','date']
 
 
 
 
-class RelationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = RelationModel
-        fields = '__all__'
