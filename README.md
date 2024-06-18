@@ -1,14 +1,55 @@
+# Pariwar Web Application Documentation
+
+## Overview
+Pariwar is a web application designed to facilitate communication and support within families and extended family networks. It provides a platform where individuals, especially students who may find it challenging to communicate directly with their parents, can seek advice and support from other family members or individuals playing familial roles.
+
+## Key Features
+- **User Roles:** Users can sign up and identify themselves with roles such as father, son, mother, grandfather, grandmother, or brother, facilitating targeted communication.
+- **Issue Posting:** Users can post their concerns anonymously or publicly, seeking suggestions from other users who match specific familial roles or relationships.
+- **Feedback and Suggestions:** Family members and other users can provide suggestions and feedback on posted issues, fostering a supportive environment.
+- **Relationship Building:** Users can establish relationships with other members based on received suggestions, enabling further communication through private messaging.
+
+## Personnel Involved
+**Front End Developers:**
+- Jeeten Mandal
+- Mohammad Abuzer Khan
+
+**Back End Developers:**
+- Rujal Baniya
+- Md Oshma
+
+## User Guide / Frequently Asked Questions
+
+### How do I sign up?
+1. Click on the "Log In" button in the upper right corner.
+2. Enter your username, email, age, select your character (father, son, mother, grandfather, grandmother, or brother), and set your password.
+3. Submit the form and check your email for the OTP (One-Time Password).
+4. Enter the OTP to confirm and be redirected to the home page.
+
+### What appears on my feed?
+Your feed will display issues and suggestions from users who match your selected familial role or relationship.
+
+### How do I post issues and view them?
+1. Enter your issue's title, description, and specify the preferred character for suggestions.
+2. Submit your issue. You will receive a confirmation notification.
+3. To view your posted issues, click on the "My Issues" button in the navigation bar.
+
+### How can I provide suggestions?
+Navigate to the feed section on the home page, find relevant posts based on your character, and click the "Reply" button to provide suggestions.
+
+### How do I send messages to someone who suggested something?
+Go to the "Relations" tab in the navbar and select the specific character you wish to communicate with.
+
+### How do I communicate with suggested individuals and build relations?
+Click on the "Suggested" link to view messages from characters you are interested in. Click the "Relate" button to establish a relationship and start sharing your issues.
+
+## Conclusion
+Pariwar aims to bridge communication gaps within families by leveraging a structured platform where users can seek and provide support, anonymously if desired, across a wide range of familial relationships. It promotes empathy, understanding, and constructive dialogue among its users.
 
 
 
 
-
-
-
-
-
-
-------------------------------------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------------------------------------------------
+--------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------
 # API Documentation
 
 ## Accounts API
