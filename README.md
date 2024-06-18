@@ -18,6 +18,12 @@ Pariwar is a web application designed to facilitate communication and support wi
 - Rujal Baniya
 - Md Oshma
 
+## Tools and Techonology used: 
+- > React,
+- > Djnago,
+- > Rest Api,
+- > Taildwind css 
+
 ## User Guide / Frequently Asked Questions
 
 ### How do I sign up?
