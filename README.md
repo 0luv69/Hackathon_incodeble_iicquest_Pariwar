@@ -60,49 +60,6 @@ Pariwar aims to bridge communication gaps within families by leveraging a struct
 
 
 
-
-# Little talk on Our Time on Hackathon of IIc
-
-**Theme:** Mental Health and Well-Being of Students
-*Precautionary Measures | Preliminary Stage Support | Post-Stage Support*
-
----
-
-- Hi, I am Rujal aka Luv, the overall Time & Surrounding in Hackathon was filled with vibe of extraordinary for hacking the thon. We as team Incodable had the great time, with all the codes, Sarcastic talks, humorous jocks and sweet songs.
-  
--  While speaking on time of **cracking the coding**, the Hackathon began from 12 AM with the Theme, the idea was needed to be uploaded till 1 pm, we were approaching the idea by dealing with ** Unique & Simple ** IDEA and at last sticked with the idea of 'Pariwar' which was simple and very unique among all the players around us.
-  
--  Then the next couple of hour we spend on making/ designing the database schema. And after designing we went to our own chair to Code
-  
--  **The main hard as Rock time** touched us at the time period of 10:30 Pm-- 6:30 Am, we got stuck in one problem to save the particular data from post request, we spent whole time solving the problem. The angel at the time was Mr Abuzer, who was suggesting us to take rest and the solve it later but we were in race to drag the solution on the table, as he noted his grounded words I being selfish went to sleep around 1:30 then the solution directly bulleted to my mind, I woke up took sticky paper of green color and wrote the solution with that stupid pen of IIC, and handed to Mr.Osama. Mr. Osama was also furious over the time, cause the same thing was just working on his Computer but not on mine, he was indeed crazy on checking the code dissimilarity between his and mine, Then maybe he also thought the sleep is needed and went to sleep. Morning as I was in toilet the God-mode was enabled on me and started to think why the code was not working, And the angel moment was drawing near to our group, and when we sat on computer. we truly did make the solution out and It started working to save the data.
-  
--  The **Enjoyment Factors** that affected us were,
-  > 1) Dialogues : " Dekh Raha Hai Binod?......." , also the The " kuch bhi bolunga to bibaad ho jayega ";
-  > 2) Spelling Mistake by me : made serious mistake on database Module spellings ;
-  > 3) Mr Osama's Sweet and soft Song:  His sweet voice could hurt anyony and also one of us was brutally hurt the most, (Give Guess on whom);
-  > 4) Mr Jeeten Sarcasm & humorous Jokes: at the specific time;
-  > 5) The Long route to Sagarmatha, OOOpps! so sad on us, climbing the stairs from down to Very top floor;
-  > 6) The Far 2 stair Down Toilet made us to hold for long period ;
-  > 7) The Guys in our Room were the known Fellows to me ;
-  
--  **The Movement Of the Presentation**: Wow and Alas goes at the same time, My laptop Heart was not Fully Functioning, in hard press it could Go to dead mode, But we were forced to present with my laptop, Our practice was Going on Morning, as the time Hit the path from That room to presenting Room as like super ghost-scary. The Factor of matter like: (laptop shutdown, Terrified question could get rise, Stop in work of Backend server and many more) were hitting my mind. Really I was super nervous as the time of "my first purpose", legs, fingers were getting trembling, The one with Tab , one with coat and well dressed, one with neat beard and another business field judged fired some question, and our Mr. jeeten as the south indian Hero just swallowed the bullet and answered so calmly that was matter of Fact.
-
-- The time I somehow managed to survive, the 1hrs 16 min lecture from one well established CA, talked about the How could we start a Startup in Nepal.
-  
-- **The Result Announcement**: The time Frame of room, the AC at max, panel of judge speaking about AI, All sit were Filled with participant, camera man running here and there to click perfect angle of picture, My mind filled with stupid thoughts what if our name were not called, what if they make us to "----" also when are they letting us to Out, After the panel of talk by all panel person, the time came for Certificate distribution, And we were called for "Runner up" title. Opps not in First position hurted little bit and was not able to think was it really our team as i saw my team-mates they were going front, I did followed them and thought that the Runner up is also not Bad, Then my mind got posed that we won "Runner up" position wowowowow.
-  
-- **The Bye**: So after all Announcement we went for photo section, The last meetup talk with those sweet volunteers, the well dressed and maintained Guy gave positive review on our idea to me, that was great. 
-  
-
-
-
-
-
---------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------
-
-
-
-
 # API Documentation
 
 ## Accounts API
@@ -631,3 +588,49 @@ Pariwar aims to bridge communication gaps within families by leveraging a struct
   "message": "string"
 }
 ```
+
+
+
+--------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------
+
+
+
+
+# Little talk on Our Time on Hackathon of IIc
+
+**Theme:** Mental Health and Well-Being of Students
+*Precautionary Measures | Preliminary Stage Support | Post-Stage Support*
+
+---
+
+- Hi, I am Rujal aka Luv, the overall Time & Surrounding in Hackathon was filled with vibe of extraordinary for hacking the thon. We as team Incodable had the great time, with all the codes, Sarcastic talks, humorous jocks and sweet songs.
+  
+-  While speaking on time of **cracking the coding**, the Hackathon began from 12 AM with the Theme, the idea was needed to be uploaded till 1 pm, we were approaching the idea by dealing with ** Unique & Simple ** IDEA and at last sticked with the idea of 'Pariwar' which was simple and very unique among all the players around us.
+  
+-  Then the next couple of hour we spend on making/ designing the database schema. And after designing we went to our own chair to Code
+  
+-  **The main hard as Rock time** touched us at the time period of 10:30 Pm-- 6:30 Am, we got stuck in one problem to save the particular data from post request, we spent whole time solving the problem. The angel at the time was Mr Abuzer, who was suggesting us to take rest and the solve it later but we were in race to drag the solution on the table, as he noted his grounded words I being selfish went to sleep around 1:30 then the solution directly bulleted to my mind, I woke up took sticky paper of green color and wrote the solution with that stupid pen of IIC, and handed to Mr.Osama. Mr. Osama was also furious over the time, cause the same thing was just working on his Computer but not on mine, he was indeed crazy on checking the code dissimilarity between his and mine, Then maybe he also thought the sleep is needed and went to sleep. Morning as I was in toilet the God-mode was enabled on me and started to think why the code was not working, And the angel moment was drawing near to our group, and when we sat on computer. we truly did make the solution out and It started working to save the data.
+  
+-  The **Enjoyment Factors** that affected us were,
+  > 1) Dialogues : " Dekh Raha Hai Binod?......." , also the The " kuch bhi bolunga to bibaad ho jayega ";
+  > 2) Spelling Mistake by me : made serious mistake on database Module spellings ;
+  > 3) Mr Osama's Sweet and soft Song:  His sweet voice could hurt anyony and also one of us was brutally hurt the most, (Give Guess on whom);
+  > 4) Mr Jeeten Sarcasm & humorous Jokes: at the specific time;
+  > 5) The Long route to Sagarmatha, OOOpps! so sad on us, climbing the stairs from down to Very top floor;
+  > 6) The Far 2 stair Down Toilet made us to hold for long period ;
+  > 7) The Guys in our Room were the known Fellows to me ;
+  
+-  **The Movement Of the Presentation**: Wow and Alas goes at the same time, My laptop Heart was not Fully Functioning, in hard press it could Go to dead mode, But we were forced to present with my laptop, Our practice was Going on Morning, as the time Hit the path from That room to presenting Room as like super ghost-scary. The Factor of matter like: (laptop shutdown, Terrified question could get rise, Stop in work of Backend server and many more) were hitting my mind. Really I was super nervous as the time of "my first purpose", legs, fingers were getting trembling, The one with Tab , one with coat and well dressed, one with neat beard and another business field judged fired some question, and our Mr. jeeten as the south indian Hero just swallowed the bullet and answered so calmly that was matter of Fact.
+
+- The time I somehow managed to survive, the 1hrs 16 min lecture from one well established CA, talked about the How could we start a Startup in Nepal.
+  
+- **The Result Announcement**: The time Frame of room, the AC at max, panel of judge speaking about AI, All sit were Filled with participant, camera man running here and there to click perfect angle of picture, My mind filled with stupid thoughts what if our name were not called, what if they make us to "----" also when are they letting us to Out, After the panel of talk by all panel person, the time came for Certificate distribution, And we were called for "Runner up" title. Opps not in First position hurted little bit and was not able to think was it really our team as i saw my team-mates they were going front, I did followed them and thought that the Runner up is also not Bad, Then my mind got posed that we won "Runner up" position wowowowow.
+  
+- **The Bye**: So after all Announcement we went for photo section, The last meetup talk with those sweet volunteers, the well dressed and maintained Guy gave positive review on our idea to me, that was great. 
+  
+
+
+
+
+
+--------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------
