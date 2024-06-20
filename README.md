@@ -603,30 +603,31 @@ Pariwar aims to bridge communication gaps within families by leveraging a struct
 
 ---
 
-- Hi, I am Rujal aka Luv, the overall Time & Surrounding in Hackathon was filled with vibe of extraordinary for hacking the thon. We as team Incodable had the great time, with all the codes, Sarcastic talks, humorous jocks and sweet songs.
+- Hi, I am Rujal aka Luv, the overall Time & Surrounding in Hackathon was filled with vibe of extraordinary for hacking the thon. We as team Incodable had the great time, with all the codes, sarcastic talks, humorous jokes and sweet songs.
   
--  While speaking on time of **cracking the coding**, the Hackathon began from 12 AM with the Theme, the idea was needed to be uploaded till 1 pm, we were approaching the idea by dealing with ** Unique & Simple ** IDEA and at last sticked with the idea of 'Pariwar' which was simple and very unique among all the players around us.
+-  While speaking on time of **cracking the coding**, the Hackathon began from 12:00 AM with the Theme, the idea was needed to be uploaded till 1:00 pm, we were approaching the idea by dealing with ** Unique & Simple ** idea and at last sticked with the project proposal of 'Pariwar' which was simple and very unique among all the players around us.
   
--  Then the next couple of hour we spend on making/ designing the database schema. And after designing we went to our own chair to Code
+-  Then the next couple of hour we spend on making/ designing the database schema. And after designing we went to the journey of programming.
   
--  **The main hard as Rock time** touched us at the time period of 10:30 Pm-- 6:30 Am, we got stuck in one problem to save the particular data from post request, we spent whole time solving the problem. The angel at the time was Mr Abuzer, who was suggesting us to take rest and the solve it later but we were in race to drag the solution on the table, as he noted his grounded words I being selfish went to sleep around 1:30 then the solution directly bulleted to my mind, I woke up took sticky paper of green color and wrote the solution with that stupid pen of IIC, and handed to Mr.Osama. Mr. Osama was also furious over the time, cause the same thing was just working on his Computer but not on mine, he was indeed crazy on checking the code dissimilarity between his and mine, Then maybe he also thought the sleep is needed and went to sleep. Morning as I was in toilet the God-mode was enabled on me and started to think why the code was not working, And the angel moment was drawing near to our group, and when we sat on computer. we truly did make the solution out and It started working to save the data.
+-  **The Hard as Rock time** touched us at the time period of 10:30 PM-- 6:30 AM, we got stuck in one problem to save the particular data from post request, we spent whole time solving the problem. The angel at the time was Mr Abuzer, who was suggesting us to take rest and solve it later but we were in race to drag the solution on the table, as he noted his grounded words I being selfish went to sleep around 1:30 AM then the solution directly crash on my mind, I woke up, took sticky notes of green color and wrote the solution with that stupid pen of IIC, and handed to Mr.Osama. He, was also furious over the time, cause the same thing was just working on his Computer but not on mine, he was indeed crazy on checking the code dissimilarity between his and mine. Then maybe he also thought about taking a nap. As morning begin, I was in washroom the instant God-mode was enabled in me and started to think why the code was not working, And suddenly the angel moment was drawing near to our group, when we sat on computer. We truly made the solution out and it started working to save the data.
   
 -  The **Enjoyment Factors** that affected us were,
-  > 1) Dialogues : " Dekh Raha Hai Binod?......." , also the The " kuch bhi bolunga to bibaad ho jayega ";
+  > 1) Dialogues : " Dekh Raha Hai Binod?.......", also the " kuch bhi bolunga to bibaad ho jayega ";
   > 2) Spelling Mistake by me : made serious mistake on database Module spellings ;
-  > 3) Mr Osama's Sweet and soft Song:  His sweet voice could hurt anyony and also one of us was brutally hurt the most, (Give Guess on whom);
-  > 4) Mr Jeeten Sarcasm & humorous Jokes: at the specific time;
-  > 5) The Long route to Sagarmatha, OOOpps! so sad on us, climbing the stairs from down to Very top floor;
-  > 6) The Far 2 stair Down Toilet made us to hold for long period ;
-  > 7) The Guys in our Room were the known Fellows to me ;
+  > 3) Mr Osama's Sweet and soft Song:  His sweet voice could hurt anyone and also one of us was brutally hurt the most, (Guess on whom);
+  > 4) Mr Jeeten's Sarcasm & humorous Jokes: at the specific time;
+  > 5) The Long route to Sagarmatha, OOOpps! so sad on us, climbing the stairs from down to very top floor;
+  > 6) The 2 stairs down restroom made us to hold for long period ;
+  > 7) The Guys in our room were the known fellows to me ;
   
--  **The Movement Of the Presentation**: Wow and Alas goes at the same time, My laptop Heart was not Fully Functioning, in hard press it could Go to dead mode, But we were forced to present with my laptop, Our practice was Going on Morning, as the time Hit the path from That room to presenting Room as like super ghost-scary. The Factor of matter like: (laptop shutdown, Terrified question could get rise, Stop in work of Backend server and many more) were hitting my mind. Really I was super nervous as the time of "my first purpose", legs, fingers were getting trembling, The one with Tab , one with coat and well dressed, one with neat beard and another business field judged fired some question, and our Mr. jeeten as the south indian Hero just swallowed the bullet and answered so calmly that was matter of Fact.
+-  **The Movement Of the Presentation**: Wow and Alas goes at the same time, My laptop heart was not fully functioning, but we were situated to present with my laptop. As time passed by, the path way from the situated room to presenting room felt like super ghost-scary walk. The factor of matter like: (laptop malfunction, terrified question raise, stuck in work of Backend server and many more) were eating my mind. I was as nervous as the time of "my first purpose", legs-fingers were getting trembled; the one with tab, one with coat-well dressed, one with neat beard and another business field Judge were firing questions after questions, where Mr. jeeten of our team was alike south indian hero who swallowed the bullet and answered all the questions calmly that was matter of fact.
 
-- The time I somehow managed to survive, the 1hrs 16 min lecture from one well established CA, talked about the How could we start a Startup in Nepal.
+- The time I somehow managed to survive was, the 1hrs 16 min lecture from one well established CA, talked about (How could we start a Startup in Nepal ?)
   
-- **The Result Announcement**: The time Frame of room, the AC at max, panel of judge speaking about AI, All sit were Filled with participant, camera man running here and there to click perfect angle of picture, My mind filled with stupid thoughts what if our name were not called, what if they make us to "----" also when are they letting us to Out, After the panel of talk by all panel person, the time came for Certificate distribution, And we were called for "Runner up" title. Opps not in First position hurted little bit and was not able to think was it really our team as i saw my team-mates they were going front, I did followed them and thought that the Runner up is also not Bad, Then my mind got posed that we won "Runner up" position wowowowow.
+- **The Result Announcement**: The time frame of room, the AC at max, panel of judge speaking about AI. All the seats were filled with participants, camera man struggling to click perfect moment of pictures. My brain filled with stupid thoughts what if we were not announced, what if they make us to "----" also when are they letting us free. After the panel talk by all the respected person, finally was the time for Certificate distribution, where our team were declared for "Runner Up" title. Opps but not in First position, weaken me a little bit and was not able to think "is it really our team standing in the stage? ". (I followed them late -blame to my imaginary thoughts) and cherished that the Runner Up Award is also not bad, then my mind sets posing that we won "Runner up" position wwwoooowwww!!!!
+
   
-- **The Bye**: So after all Announcement we went for photo section, The last meetup talk with those sweet volunteers, the well dressed and maintained Guy gave positive review on our idea to me, that was great. 
+- **The Bye**: So after the announcement, we had a photo session. The last meetup talk with those sweet volunteers, the handsome Judge who gave positive review on our idea, that was a valuable asset.
   
 
 
