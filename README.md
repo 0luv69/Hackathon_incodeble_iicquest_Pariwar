@@ -87,6 +87,7 @@ Pariwar aims to bridge communication gaps within families by leveraging a struct
 }
 ```
 
+
 ### 2. Register API
 - **Endpoint:** `/api/register/`
 - **Method:** `POST`
