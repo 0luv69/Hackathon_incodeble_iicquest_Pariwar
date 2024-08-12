@@ -1,6 +1,5 @@
 # Pariwar Web Application Documentation
-sdfadsfadf
-
+ruja ghjhfdjy
 
 ## Overview
 Pariwar is a web application designed to facilitate communication and support within families and extended family networks. It provides a platform where individuals, especially students who may find it challenging to communicate directly with their parents, can seek advice and support from other family members or individuals playing familial roles.
