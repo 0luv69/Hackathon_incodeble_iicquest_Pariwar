@@ -1,0 +1,59 @@
+Table User {
+  id integer [pk, increment]
+  username varchar
+  password varchar
+  email varchar
+  first_name varchar
+  last_name varchar
+  is_superuser boolean
+  is_staff boolean
+  is_active boolean
+  date_joined datetime
+}
+
+Table ProfileModel {
+  id integer [pk, increment]
+  user_id integer [ref: > User.id]
+  email_token varchar
+  is_verified boolean
+  age integer
+  character varchar
+  created_at datetime
+  updated_at datetime
+}
+
+Table IssueModel {
+  id integer [pk, increment]
+  issued_by_id integer [ref: > User.id]
+  title varchar
+  description text
+  preferred_char varchar
+  got_relation boolean
+  created_at datetime
+  updated_at datetime
+}
+
+Table ReplyModel {
+  id integer [pk, increment]
+  replied_by_id integer [ref: > User.id]
+  issued_by_id integer [ref: > IssueModel.id]
+  message text
+  created_at datetime
+  updated datetime
+}
+
+Table RelationModel {
+  id integer [pk, increment]
+  relation_name varchar
+  issued_by_id integer [ref: > User.id]
+  suggested_by_id integer [ref: > User.id]
+}
+
+Table ChatModel {
+  id integer [pk, increment]
+  sender_id integer [ref: > User.id]
+  message text
+  relation_id integer [ref: > RelationModel.id]
+  date datetime
+}
+
