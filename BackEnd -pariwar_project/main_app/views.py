@@ -24,7 +24,6 @@ class LoginApi(APIView):
         password = data.get('password')
         if not username or not password:
             return Response({'message': 'username & password Fields is required', 'login': False}, status=status.HTTP_400_BAD_REQUEST)
-        print(username, password)
         user = authenticate(username=username, password=password)
         if user is not None:
             refresh = RefreshToken.for_user(user)
